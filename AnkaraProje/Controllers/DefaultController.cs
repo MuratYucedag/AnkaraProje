@@ -36,7 +36,7 @@ namespace AnkaraProje.Controllers
             var values = db.TblSkill.ToList();
             return PartialView(values);
         }
-
+        //açıklama satırı
         public PartialViewResult PartialTestimonial()
         {
             var values = db.TblTestimonial.ToList();
