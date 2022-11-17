@@ -1,0 +1,32 @@
+﻿@model List<AnkaraProje.Models.TblSkill>
+
+@{
+    ViewBag.Title = "SkillList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yetenek Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Değer</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SkillID</td>
+            <td>@item.Title</td>
+            <td>@item.Value</td>
+            <td><a href="/Skill/DeleteSkill/@item.SkillID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Skill/UpdateSkill/@item.SkillID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+
+<a href="/Skill/AddSkill/" class="btn btn-primary">Yeni Yetenek Girişi</a>

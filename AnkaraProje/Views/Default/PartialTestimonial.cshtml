@@ -1,0 +1,57 @@
+﻿@model List<AnkaraProje.Models.TblTestimonial>
+
+<section class="w3l-testimonials" id="testimonials">
+    <div class="customers-6-content py-5">
+        <div class="container py-lg-3">
+            <div class="heading text-center mx-auto">
+                <h3 class="head">İnsanlar Bizim İçin Ne Dediler</h3>
+                <p class="my-3 head ">
+                    Müşterilerimiz ve çalıştığımız firmaların bizlerle ilgili görüşleri.
+                </p>
+            </div>
+
+            <div id="customerhnyCarousel" class="carousel slide" data-ride="carousel">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#customerhnyCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#customerhnyCarousel" data-slide-to="1"></li>
+
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner pb-5">
+
+                    <div class="carousel-item active">
+                        <div class="customer row py-5 mt-3">
+                            @foreach (var item in Model)
+                            {
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card">
+
+                                    <div class="card-body">
+                                        <img class="card-img-top img-responsive" src="@item.ImageUrl" alt="">
+                                        <h3 class="card-title mt-2">@item.Name</h3>
+                                        <p class="sub-title mb-3">@item.Title</p>
+                                        <p class="card-text">
+                                            "@item.Comment"
+                                        </p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            }
+                        </div>
+                    </div>
+                    <!--.item-->
+
+                    
+
+
+                </div>
+                <!--.carousel-inner-->
+            </div>
+        </div>
+    </div>
+    <!--//customers -->
+</section>

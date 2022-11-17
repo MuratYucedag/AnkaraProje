@@ -1,0 +1,29 @@
+﻿@model List<AnkaraProje.Models.TblSkill>
+
+<section class="w3l-about ">
+    <div class="skills-bars py-5">
+        <div class="container py-md-3">
+            <div class="heading text-center mx-auto">
+                <h3 class="head">Merhaba, siteme hoşgeldiniz</h3>
+                <p class="my-3 head">
+                    Selamlar, yaptığım projelere, geliştrdiğim uygulamalara ve diğer verilere web sayfamdan erişim sağlayabilirsiniz. Bana ulaşmak için iletişim menüsünden yazmanız yeterli.
+                </p>
+
+            </div>
+            <div class="row mt-5 pt-3">
+              
+                @foreach (var item in Model)
+                {
+                <div class="col-lg-4 col-md-4 col-sm-6 skills-bar-grids mb-4 pb-2">
+                    <h4>@item.Title</h4>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-color" role="progressbar" style="width: @item.Value% ;height:4px;" aria-valuenow="@item.Value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</section>
