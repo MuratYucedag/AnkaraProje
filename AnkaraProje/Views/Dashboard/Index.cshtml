@@ -1,8 +1,9 @@
 ﻿
 @{
+    ViewBag.Title = "Index";
     Layout = null;
 }
-
+<br />
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,19 +19,19 @@
 <body>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
 
-    <div class="col-md-10 ">
+    <div class="col-md-12 ">
         <div class="row ">
             <div class="col-xl-3 col-lg-6">
                 <div class="card l-bg-cherry">
                     <div class="card-statistic-3 p-4">
                         <div class="card-icon card-icon-large"><i class="fas fa-shopping-cart"></i></div>
                         <div class="mb-4">
-                            <h5 class="card-title mb-0">Yeni Orders</h5>
+                            <h5 class="card-title mb-0">Referans Sayımız</h5>
                         </div>
                         <div class="row align-items-center mb-2 d-flex">
                             <div class="col-8">
                                 <h2 class="d-flex align-items-center mb-0">
-                                    3,243
+                                    @ViewBag.v
                                 </h2>
                             </div>
                             <div class="col-4 text-right">
@@ -48,12 +49,12 @@
                     <div class="card-statistic-3 p-4">
                         <div class="card-icon card-icon-large"><i class="fas fa-users"></i></div>
                         <div class="mb-4">
-                            <h5 class="card-title mb-0">Customers</h5>
+                            <h5 class="card-title mb-0">Yetenek Sayısı</h5>
                         </div>
                         <div class="row align-items-center mb-2 d-flex">
                             <div class="col-8">
                                 <h2 class="d-flex align-items-center mb-0">
-                                    15.07k
+                                    @ViewBag.v2
                                 </h2>
                             </div>
                             <div class="col-4 text-right">
@@ -71,12 +72,12 @@
                     <div class="card-statistic-3 p-4">
                         <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
                         <div class="mb-4">
-                            <h5 class="card-title mb-0">Ticket Resolved</h5>
+                            <h5 class="card-title mb-0">Başarılı Yetenek Sayısı</h5>
                         </div>
                         <div class="row align-items-center mb-2 d-flex">
                             <div class="col-8">
                                 <h2 class="d-flex align-items-center mb-0">
-                                    578
+                                    @ViewBag.v3
                                 </h2>
                             </div>
                             <div class="col-4 text-right">
@@ -94,12 +95,12 @@
                     <div class="card-statistic-3 p-4">
                         <div class="card-icon card-icon-large"><i class="fas fa-dollar-sign"></i></div>
                         <div class="mb-4">
-                            <h5 class="card-title mb-0">Revenue Today</h5>
+                            <h5 class="card-title mb-0">Ortalama Yetenek Puanı</h5>
                         </div>
                         <div class="row align-items-center mb-2 d-flex">
                             <div class="col-8">
                                 <h2 class="d-flex align-items-center mb-0">
-                                    $11.61k
+                                    @ViewBag.v4
                                 </h2>
                             </div>
                             <div class="col-4 text-right">
@@ -114,6 +115,8 @@
             </div>
         </div>
     </div>
+
+    @Html.Action("PartialChart")
 
     <style type="text/css">
         .card {
@@ -186,3 +189,4 @@
     </script>
 </body>
 </html>
+
