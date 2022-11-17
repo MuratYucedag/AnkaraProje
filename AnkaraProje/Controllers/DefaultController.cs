@@ -42,5 +42,9 @@ namespace AnkaraProje.Controllers
             var values = db.TblTestimonial.ToList();
             return PartialView(values);
         }
+        public ActionResult Deneme()
+        {
+            return View();
+        }
     }
 }

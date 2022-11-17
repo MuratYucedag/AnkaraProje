@@ -28,5 +28,6 @@ namespace AnkaraProje.Models
         public virtual DbSet<TblContact> TblContact { get; set; }
         public virtual DbSet<TblSkill> TblSkill { get; set; }
         public virtual DbSet<TblTestimonial> TblTestimonial { get; set; }
+        public virtual DbSet<TblAdmin> TblAdmin { get; set; }
     }
 }
